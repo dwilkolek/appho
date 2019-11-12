@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuOption } from './model/menu-option.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'APPHO';
+  menu: MenuOption[] = [
+    {
+      name: 'Constructions',
+      path: 'constructions',
+      suboptions: [
+        {
+          path: 'rod-finder',
+          name: 'Rod Finder'
+        }
+      ]
+    }
+  ];
 }
