@@ -15,7 +15,7 @@ export class RodFinderComponent implements OnInit {
   dataSource;
   displayedColumns: string[] = ['count', 'diameter', 'crossSectionalArea'];
 
-
+  resultsFor = '';
   constructor(private rodFinderService: RodFinderService) { }
 
   ngOnInit() {
@@ -24,9 +24,9 @@ export class RodFinderComponent implements OnInit {
     });
   }
   getData() {
-    console.log(this.requiredCSA);
     this.combinations = this.rodFinderService.getRodOptions(this.requiredCSA.value);
     this.dataSource = this.combinations;
+    this.resultsFor = this.requiredCSA.value;
   }
 
 }
