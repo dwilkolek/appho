@@ -16,6 +16,10 @@ export class AppComponent {
         {
           path: 'rod-finder',
           name: 'Rod Finder'
+        },
+        {
+          path: 'roof-pressure-coefficients',
+          name: 'Roof Pressure Coefficients'
         }
       ]
     }

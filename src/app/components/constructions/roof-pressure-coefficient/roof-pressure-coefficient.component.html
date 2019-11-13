@@ -1,0 +1,21 @@
+<h2>Find roof pressure coefficients</h2>
+<hr />
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Angle" [formControl]="angle">
+    </mat-form-field>
+    <button class="inline-find" mat-raised-button (click)="getData()">Find</button>
+</form>
+
+<br />
+<h3>Results</h3>
+<div class="row">
+    <div class="md-6 xs-12 rescell">
+        <h4>Wind angle: 90&deg;</h4>
+        <app-coef [coef]="coef90"></app-coef>
+    </div>
+    <div class="md-6 xs-12 rescell">
+        <h4>Wind angle: 0&deg;</h4>
+        <app-coef [coef]="coef0"></app-coef>
+    </div>
+</div>
