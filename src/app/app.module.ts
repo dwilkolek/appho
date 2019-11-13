@@ -15,6 +15,7 @@ import { RodFinderComponent } from './components/constructions/rod-finder/rod-fi
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RoofPressureCoefficientComponent } from './components/constructions/roof-pressure-coefficient/roof-pressure-coefficient.component';
 import { CoefComponent } from './components/constructions/roof-pressure-coefficient/coef/coef.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { CoefComponent } from './components/constructions/roof-pressure-coeffici
     NgbModule,
     AppMaterialModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
