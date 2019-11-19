@@ -1,7 +1,0 @@
-<form class="example-form" *ngFor="let l of letters">
-    <h5>{{l}}</h5>
-    <mat-form-field class="example-full-width resfield" *ngFor="let c of coefs">
-        <input matInput [placeholder]="c.replace('Additional', '+')" readonly [value]="safeGet(coef, l, c)">
-    </mat-form-field>
-    <br /><br />
-</form>
