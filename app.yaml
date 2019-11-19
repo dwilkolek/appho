@@ -19,3 +19,4 @@ skip_files:
   - ^(.*/)?.*\.yaml$
   - ^LICENSE
   - dist/spa/
+  - .quasar
