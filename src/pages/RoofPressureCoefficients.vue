@@ -7,7 +7,6 @@
         @submit="onSubmit"
         class="q-gutter-md"
       >
-
         <q-input
           filled
           v-model.number="angle"
@@ -29,7 +28,6 @@
         <q-space />
         <q-separator />
       </q-form>
-
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -39,10 +37,7 @@
         </q-toolbar-title>
       </div>
     </div>
-    <div class="
-      row
-      justify-between">
-
+    <div class="row justify-between">
       <div class="col-xs-12 col-lg-6">
         <q-table
           class="q-ma-md"
@@ -60,7 +55,7 @@
       <div class="col-xs-12 col-lg-6">
         <q-table
           class="q-ma-md"
-          title=""
+          title
           :data="data0"
           :columns="columns"
           row-key="letter"
@@ -72,11 +67,9 @@
         </q-table>
       </div>
     </div>
-
   </q-page>
 </template>
 <script>
-
 import Service from '../services/PreasureCoefficientsService.js';
 
 export default {
@@ -98,7 +91,7 @@ export default {
           required: true,
           label: '',
           field: row => row.letter,
-          format: val => `${(!val && val !== 0) ? '' : val}`,
+          format: val => `${!val && val !== 0 ? '' : val}`,
           sortable: true,
         },
         {
@@ -106,7 +99,7 @@ export default {
           required: true,
           label: 'Cpe10',
           field: row => row.cpe10,
-          format: val => `${(!val && val !== 0) ? '' : val}`,
+          format: val => `${!val && val !== 0 ? '' : val}`,
           sortable: true,
         },
         {
@@ -114,7 +107,7 @@ export default {
           required: true,
           label: 'Cpe1',
           field: row => row.cpe10,
-          format: val => `${(!val && val !== 0) ? '' : val}`,
+          format: val => `${!val && val !== 0 ? '' : val}`,
           sortable: true,
         },
         {
@@ -122,7 +115,7 @@ export default {
           required: true,
           label: 'Cpe10+',
           field: row => row.cpe10a,
-          format: val => `${(!val && val !== 0) ? '' : val}`,
+          format: val => `${!val && val !== 0 ? '' : val}`,
           sortable: true,
         },
         {
@@ -130,7 +123,7 @@ export default {
           required: true,
           label: 'Cpe1+',
           field: row => row.cpe1a,
-          format: val => `${(!val && val !== 0) ? '' : val}`,
+          format: val => `${!val && val !== 0 ? '' : val}`,
           sortable: true,
         },
       ],
@@ -148,10 +141,13 @@ export default {
           });
       }
       this.lastSortedOutAngle = this.angle;
-      this.data0 = transformResultToData(Service.getCoefficientsFor0(this.angle));
-      this.data90 = transformResultToData(Service.getCoefficientsFor90(this.angle));
+      this.data0 = transformResultToData(
+        Service.getCoefficientsFor0(this.angle),
+      );
+      this.data90 = transformResultToData(
+        Service.getCoefficientsFor90(this.angle),
+      );
     },
-
   },
 };
 </script>
