@@ -17,7 +17,17 @@
 
       </q-toolbar>
     </q-header>
-
+    <q-footer
+      reveal
+      elevated
+    >
+      <q-toolbar>
+        <q-toolbar-title class="footer-title">Created by <a
+            href="https://wilkolek.eu"
+            target="_blank"
+          >wilkolek.eu</a></q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
@@ -65,21 +75,13 @@
             <q-item-label caption>Constructions</q-item-label>
           </q-item-section>
         </q-item>
-        <!-- <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>-->
       </q-list>
     </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
   </q-layout>
 </template>
 
@@ -94,3 +96,15 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+.footer-title {
+  font-size: 1rem;
+  a {
+    color: #ccc;
+    text-decoration: none;
+    &:hover {
+      color: #333;
+    }
+  }
+}
+</style>

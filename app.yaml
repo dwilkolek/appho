@@ -6,8 +6,10 @@ handlers:
   - url: /
     static_files: dist/pwa/index.html
     upload: dist/pwa/index.html
+    secure: always
   - url: /
     static_dir: dist/pwa
+    secure: always
 
 skip_files:
   - e2e/

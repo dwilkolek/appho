@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <q-toolbar-title>Rof finder</q-toolbar-title>
+    <q-toolbar-title>Rod finder</q-toolbar-title>
     <div class="q-pa-md">
       <q-form
         padding
