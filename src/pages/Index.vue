@@ -20,11 +20,11 @@ export default {
 <style scoped>
 .box {
   position: relative;
-  height: 200px;
-  width: 200px;
+  max-width: 60%;
+  margin: auto;
 }
 .build-icon {
-  font-size: 200px;
+  font-size: 25vh;
   animation: spin 1s linear infinite;
   transform-origin: bottom left;
 }
@@ -33,7 +33,9 @@ export default {
   right: 0px;
   bottom: 0px;
 }
-
+h1 {
+  line-height: 1em !important;
+}
 @keyframes spin {
   0% {
     transform: rotate(-25deg);
