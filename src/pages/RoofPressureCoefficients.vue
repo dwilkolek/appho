@@ -53,7 +53,7 @@
           hide-bottom
         >
           <template v-slot:top="props">
-            <q-toolbar-title>Wing angle 90&deg;</q-toolbar-title>
+            <q-toolbar-title>Wind angle 90&deg;</q-toolbar-title>
           </template>
         </q-table>
       </div>
@@ -67,7 +67,7 @@
           hide-bottom
         >
           <template v-slot:top="props">
-            <q-toolbar-title>Wing angle 0&deg;</q-toolbar-title>
+            <q-toolbar-title>Wind angle 0&deg;</q-toolbar-title>
           </template>
         </q-table>
       </div>
